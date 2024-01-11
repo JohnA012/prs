@@ -1,0 +1,281 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* @import url('<link href="https://fonts.googleapis.com/css2?family=Lato:wght@100&family=Quicksand:wght@300&display=swap" rel="stylesheet">'); */
+:root{
+    --first:#7DE5ED;
+    --second: #81C6E8;
+    --third:#5DA7DB;
+    --fourth:#5837D0;
+    --black:rgba(0,0,0,0.8);
+}
+*{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+    font-family: 'Quicksand', sans-serif;
+    list-style: none;
+}
+/* body{
+    font-family: 'Poppins', sans-serif;
+    
+} */
+
+.login-content{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    width:100%;
+    height:100vh;
+    position: fixed;
+    top:0;
+    /* background-image: linear-gradient(white, #72aaff); */
+}
+
+.login-content .image{
+    position: relative;
+    background-image:url('../img/dry.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    box-shadow: inset rgba(0, 0, 0, 0.24) 0px 3px 10px;
+    animation-name: text;
+    animation-duration: 0.5s;
+}
+.login-content .image .text{
+    position: absolute;
+    bottom: 0;
+    font-size: 30px;
+    color: white;
+    padding:20px;
+    animation-name: text;
+    animation-duration: 0.5s;
+}
+@keyframes text {
+    0%   {left:-1000px;}
+    100%  {left:0px;}
+}
+.login-content .image .text h1{
+    font-size: 50px;
+    text-shadow: 3px 3px rgba(0,0,0,0.8);
+}.login-content .image .text p{
+    font-size: 20px;
+    text-shadow: 2px 2px rgba(0,0,0,0.8);
+}
+.loginbox{
+    position: relative;
+    animation-name: right;
+    animation-duration: 0.5s;
+}
+.loginbox .icon, #loginform .icon{
+    background-color: #0d6efd;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height:100%;
+    padding:17px;
+    font-size: 25px;
+    color: white;
+}.loginbox .label, #loginform .label{
+    padding-left:75px;
+}
+#alert{
+    display: none;
+}
+
+.logo{
+    position: relative;
+    text-align: center;
+}
+@keyframes right {
+    0%   {right:-1000px;}
+    100%  {right:0px;}
+}
+.logo img{
+    width:70px;
+    height:70px;
+    margin-bottom: 20px;
+}
+.logo h2{
+    line-height: 15px;
+    color:#0d6efd;
+    font-size: 50px;
+    padding-bottom:10px;
+    text-shadow: 2px 2px rgba(0,0,0,0.8);
+}
+.logo label{
+    font-weight: 500;
+    text-shadow: 2px 2px rgba(0,0,0,0.3);
+    font-size: 32px;
+    padding:0px 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: white;
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+}
+#time{
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+    text-shadow: 1px 1px rgba(0,0,0,0.8);
+}
+#date{
+    font-size: 15px;
+    font-weight: normal;
+    color: white;
+    text-shadow: 1px 1px rgba(0,0,0,0.8);
+}
+.datetime{
+    text-align: right;
+    position: absolute;
+    top: 10px;
+    right:10px;
+    animation-name: top;
+    animation-duration: 0.5s;
+}
+@keyframes top {
+    0%   {top:-1000px;}
+    100%  {top:10px;}
+}
+
+form .error {
+    color: #ff0000;
+  }
+
+/* SMALL SCREEN CSS START */
+#smallscreen{
+    display: none;
+}
+.login-content-small{
+    display: grid;
+    background-image:url('../img/dry.jpg');
+    background-size:cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width:100%;
+    height:100vh;
+}
+
+.login-content-small .login-box-small{
+    position: relative;
+    margin: auto;
+    width:600px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 10px;
+    padding:20px 40px;
+    animation-name: top;
+    animation-duration: 0.5s;
+}
+.login-box-small .small-logo{
+    position: relative;
+    text-align: center;
+    padding-bottom:50px;
+}
+.login-box-small .small-logo img{
+    width:70px;
+    height:70px;
+    margin-bottom: 20px;
+}
+.login-box-small .small-logo h2{
+    line-height: 15px;
+    color:#0d6efd;
+    font-size: 50px;
+    padding-bottom:10px;
+    text-shadow: 2px 2px rgba(0,0,0,0.8);
+}.login-box-small .small-logo label{
+    font-weight: 500;
+    text-shadow: 2px 2px rgba(0,0,0,0.3);
+    font-size: 32px;
+    padding:0px 5px;
+    border: 1px solid white;
+    border-radius: 2px;
+    color: white;
+    background-color: red;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 2px 2px;
+}
+.login-box-small .icon{
+    background-color: #0d6efd;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+    height:100%;
+    padding:17px;
+    font-size: 25px;
+    color: white;
+}.login-box-small .label{
+    padding-left:75px;
+}
+
+.select2-container--default .select2-selection--single{
+    padding:20px 5px;
+    height: 55px;
+    width: 100%; 
+    font-size: 16px;  
+    position: relative;
+    border:1px solid rgba(0,0,0,0.2);
+    background-color: var(--sidebar-color);
+    transition: var(--tran-03) !important;
+}
+
+span.select2-selection__rendered{
+    color: var(--text-color) !important;
+    transition: var(--tran-03) !important;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow{
+    width: 100%;
+    font-size: 1.3em;
+    padding: 25px 12px;
+    height: 27px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+    transition: var(--tran-03);
+}
+
+
+.select2-container--default .select2-selection--single{
+    padding:20px 5px;
+    height: 55px;
+    width: 100%; 
+    font-size: 16px;  
+    position: relative;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow
+{
+    width: 100%;
+    font-size: 1.3em;
+    padding: 25px 12px;
+    height: 27px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20px;
+}
+.select2-container .select2-selection--single {
+    height: 55px !important;
+}
+
+.form-floating > .form-control, .form-floating > .form-control-plaintext{
+    padding: 1.90rem 1rem 1rem 4rem !important;
+}
+/* SMALL SCREEN CSS END */
+
+
+@media only screen and (max-width: 1200px) {
+    #widescreen{
+        display: none;
+    }
+    #smallscreen{
+        display: block;
+    }
+    
+}
+@media only screen and (max-width: 600px) {
+    .login-content-small .login-box-small{
+        width:95%;
+        margin: auto;
+
+    }
+}
